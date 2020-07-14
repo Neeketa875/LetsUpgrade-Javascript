@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Current Day and Time</title>
+    </head>
+    <body>
+         <script type="text/javascript">
+            var d = new Date();
+            var da = d.getDay();
+            var wk_arr = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+            document.write("Today is : "+wk_arr[da]+"<br/>");
+            var h = d.getHours();
+            var h1 = h>=12 ? 'PM': 'AM';
+            h=h%12;
+            h=h?h:12;
+            var m=d.getMinutes();
+            m=m<10?'0'+m:m;
+            var t=h+""+h1+":"+m+":"+d.getSeconds();
+            document.write("Current Time is :"+t);
+        </script>
+    </body>
+</html>
